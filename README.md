@@ -7,6 +7,7 @@ This project is a sample project of a live auction website. At the auction left-
 
 ## Components
 Homepage: Shows all live auctions
+
 LiveAuction: shows selected live auction of a vegetable + highest bidder + highest price + remaining time of the auction
 Nav-bar: log in/log out, logo, search bar
 Search: shows searched vegetables and their status (active auction/inactive auction)
