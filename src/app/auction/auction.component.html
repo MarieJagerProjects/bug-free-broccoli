@@ -1,1 +1,9 @@
-<p>auction works!</p>
+<div>
+    <h2>{{auction.name | uppercase }} Details</h2>
+    <span>{{ vegetable.amount }} </span>
+    <span>{{ vegetable.name }} </span>
+    <div>
+        <span>last bid: </span> {{bid.lastBid | currency: 'EUR' }} 
+        <span> by </span> {{ bid.username }} 
+    </div>
+</div>
