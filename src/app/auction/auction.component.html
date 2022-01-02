@@ -1,9 +1,8 @@
 <div>
-    <h2>{{auction.name | uppercase }} Details</h2>
-    <span>{{ vegetable.amount }} </span>
-    <span>{{ vegetable.name }} </span>
-    <div>
-        <span>last bid: </span> {{bid.lastBid | currency: 'EUR' }} 
-        <span> by </span> {{ bid.username }} 
-    </div>
+    <h2>Live Auctions:</h2>
+    <ul class="auctions">
+        <li *ngFor="let auction of auctions">
+            <span class="badge"> {{auction.vegetable}} </span> {{auction.amount}}
+        </li>
+    </ul>
 </div>
