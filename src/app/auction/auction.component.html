@@ -1,8 +1,13 @@
 <div>
     <h2>Live Auctions:</h2>
     <ul class="auctions">
-        <li *ngFor="let auction of auctions">
-            <span class="badge"> {{auction.vegetable}} </span> {{auction.amount}}
+        <li *ngFor="let auction of auctions" (click)="onSelect(auction)">
+            <span class="badge"> {{auction.amount}} </span> {{auction.vegetable}}
+            <br> {{ auction.lastBid | currency }}
         </li>
     </ul>
+    <div *ngIf="selectedAuction">
+        <label for="auction-lastBid">Last bid: </label>
+        <input id="auction-lastBid" [(ngModel)]="selectedAuction.lastBid" placeholder="lastBid">
+    </div>
 </div>

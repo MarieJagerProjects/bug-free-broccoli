@@ -12,6 +12,10 @@ import { BID } from '../mocks/mock-bids';
 
 export class AuctionComponent implements OnInit {
 
+  selectedAuction?: Auction;
+  onSelect(auction: Auction): void {
+    this.selectedAuction = auction;
+  }
   auctions = AUCTION;
 
   constructor() { }
