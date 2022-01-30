@@ -1,0 +1,6 @@
+<h2>Live auctions</h2>>
+<div class="auction-menu">
+    <a *ngFor="let auction of auctions" routerLink="/detail/{{auction.id}}"> 
+        {{ auction.id }}
+    </a>
+</div>

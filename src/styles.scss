@@ -1,22 +1,30 @@
-/* Application-wide Styles */
+/* Global Styles */
+$font-stack: Helvetica, sans-serif;
+$primary-color: #195E26;
+$second-color: #96FFAA;
+$third-color: #3D6B45;
+$accent-colour-dark: #992C40;
+$accent-colour-light: #E67085;
+$text-black: #333;
+$text-white: #fff;
+
+
 h1 {
-    color: rgb(51, 153, 136);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-  }
-  h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-  }
-  body {
-    margin: 2em;
-  }
-  body, input[type="text"], button {
-    color: #333;
-    font-family: Cambria, Georgia, serif;
-  }
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  font: 250% $font-stack;
+  color: $primary-color;
+}
+h2, h3 {
+  font: 200% $font-stack;
+  color: $primary-color;
+}
+body {
+  margin: 2em;
+}
+body, input[type="text"], button {
+  color: $text-black;
+  font-family: Cambria, Georgia, serif;
+}
+/* everywhere else */
+* {
+  font: 100% $font-stack;
+}
