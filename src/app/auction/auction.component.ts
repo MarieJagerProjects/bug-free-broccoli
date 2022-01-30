@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Auction } from './auction';
-import { Bid } from '../bid/bid';
-import { AUCTION } from '../mocks/mock-auctions';
-import { BID } from '../mocks/mock-bids';
+import { IAuction } from './IAuction';
+import { AuctionService } from '../services/auction.service';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-auction',
@@ -11,16 +10,17 @@ import { BID } from '../mocks/mock-bids';
 })
 
 export class AuctionComponent implements OnInit {
+  
+  auctions: IAuction[] = [];
 
-  selectedAuction?: Auction;
-  onSelect(auction: Auction): void {
-    this.selectedAuction = auction;
-  }
-  auctions = AUCTION;
-
-  constructor() { }
+  constructor(private auctionService: AuctionService, private messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.getAuctions();
+  }
+
+  getAuctions(): void {
+    this.auctionService.getAuctions().subscribe(auctions => this.auctions = auctions);
   }
 
 }    
