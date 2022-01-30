@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './views/nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuctionComponent } from './auction/auction.component';
-import { BidComponent } from './bid/bid.component';
-import { AuctionDetailComponent } from './auction/auction-detail/auction-detail.component';
-import { MessagesComponent } from './messages/messages.component';
+import { AuctionComponent } from './views/auction/auction.component';
+import { BidComponent } from './views/bid/bid.component';
+import { AuctionDetailComponent } from './views/auction-detail/auction-detail.component';
+import { MessagesComponent } from './views/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { SideBarComponent } from './views/side-bar/side-bar.component';
+import { FooterComponent } from './views/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BidComponent,
     AuctionDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    SideBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
