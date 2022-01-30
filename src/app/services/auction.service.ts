@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { IAuction } from '../auction/IAuction';
+import { IAuction } from '../views/auction/IAuction';
 import { AUCTIONS } from '../mocks/mock-auctions';
 import { MessageService } from './message.service';
 

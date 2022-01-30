@@ -1,4 +1,4 @@
-import { IAuction } from "../auction/IAuction";
+import { IAuction } from "../views/auction/IAuction";
 
 export const AUCTIONS: IAuction[] = [
     { id: 1, vegetable: 'Cucumber', amount: 10, lastBid: 1.00 },

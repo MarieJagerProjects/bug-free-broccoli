@@ -10,15 +10,11 @@ nav {
         margin-top: 10px;
         display: inline-block;
         background-color: $second-color;
-        color: $text-black;
+        color: $pure-black;
         border-radius: 4px;
     }
-
     a:hover {
-        color: $text-white;
+        color: $pure-white;
         background-color: $third-color;
-    }
-    a.active {
-        background-color: black;
     }
 }

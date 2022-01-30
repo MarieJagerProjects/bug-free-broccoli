@@ -1,4 +1,4 @@
-import { Bid } from "../bid/bid";
+import { Bid } from "../views/bid/bid";
 
 export const BID: Bid[] = [
     { username: 'Heinz', lastBid: 0.99 },

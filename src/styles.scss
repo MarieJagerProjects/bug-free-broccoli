@@ -5,8 +5,8 @@ $second-color: #96FFAA;
 $third-color: #3D6B45;
 $accent-colour-dark: #992C40;
 $accent-colour-light: #E67085;
-$text-black: #333;
-$text-white: #fff;
+$pure-black: #333;
+$pure-white: #fff;
 
 
 h1 {
@@ -21,7 +21,7 @@ body {
   margin: 2em;
 }
 body, input[type="text"], button {
-  color: $text-black;
+  color: $pure-black;
   font-family: Cambria, Georgia, serif;
 }
 /* everywhere else */
