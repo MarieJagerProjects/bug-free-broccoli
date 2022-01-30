@@ -6,8 +6,8 @@ import { BID } from '../mocks/mock-bids';
 
 @Component({
   selector: 'app-auction',
-  templateUrl: './auction.component.html',
-  styleUrls: ['./auction.component.scss']
+  templateUrl: './auction.template.html',
+  styleUrls: ['./auction.style.scss']
 })
 
 export class AuctionComponent implements OnInit {
