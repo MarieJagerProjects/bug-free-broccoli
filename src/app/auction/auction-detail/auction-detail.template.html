@@ -1,0 +1,8 @@
+<div *ngIf="auction">
+    <div><span>id: </span>{{ auction.id }}</div>
+    <div>
+        <label for="auction-lastBid">Last bid: </label>
+        <input id="auction-lastBid" [(ngModel)]="auction.lastBid" placeholder="lastBid"/>
+    </div>
+    <button (click)="goBack()">go back</button>
+</div>

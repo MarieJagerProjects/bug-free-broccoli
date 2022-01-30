@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { IAuction } from '../auction/IAuction';
 import { AuctionService } from '../services/auction.service';
 

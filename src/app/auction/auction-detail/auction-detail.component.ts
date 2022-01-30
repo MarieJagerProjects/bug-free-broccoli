@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { IAuction } from '../auction/IAuction';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { AuctionService } from '../services/auction.service';
+
+import { IAuction } from '../IAuction';
+import { AuctionService } from '../../services/auction.service';
 
 @Component({
   selector: 'app-auction-detail',
@@ -11,7 +12,7 @@ import { AuctionService } from '../services/auction.service';
 })
 export class AuctionDetailComponent implements OnInit {
 
-  @Input() auction?: IAuction;
+  auction?: IAuction;
 
   constructor(private route: ActivatedRoute, private auctionService: AuctionService, private location: Location) { }
 
@@ -20,8 +21,12 @@ export class AuctionDetailComponent implements OnInit {
   }
 
   getAuction(): void {
-    const id = String(this.route.snapshot.paramMap.get('id'));
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.auctionService.getAuction(id).subscribe(auction => this.auction = auction);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

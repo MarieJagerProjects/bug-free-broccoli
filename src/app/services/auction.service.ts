@@ -18,7 +18,7 @@ export class AuctionService {
     return auctions;
   }
 
-  getAuction(id: string): Observable<IAuction> {
+  getAuction(id: number): Observable<IAuction> {
     const auction = AUCTIONS.find(h => h.id === id)!;
     this.messageService.add(`AuctionService: fetched auction id=${id}`);
     return of(auction);

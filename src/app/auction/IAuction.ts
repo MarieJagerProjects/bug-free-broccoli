@@ -1,6 +1,6 @@
 
 export interface IAuction {
-    id: string;
+    id: number;
     vegetable: string;
     amount: number;
     lastBid: number;

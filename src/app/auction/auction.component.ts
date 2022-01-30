@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { IAuction } from './IAuction';
 import { AuctionService } from '../services/auction.service';
-import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-auction',
@@ -13,7 +13,7 @@ export class AuctionComponent implements OnInit {
   
   auctions: IAuction[] = [];
 
-  constructor(private auctionService: AuctionService, private messageService: MessageService) { }
+  constructor(private auctionService: AuctionService) { }
 
   ngOnInit(): void {
     this.getAuctions();
