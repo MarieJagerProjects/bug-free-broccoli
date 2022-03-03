@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { IAuction } from '../views/auction/IAuction';
-import { AUCTIONS } from '../mocks/mock-auctions';
 import { MessageService } from './message.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -15,15 +13,22 @@ export class AuctionService {
 
   constructor(private messageService: MessageService, private http:HttpClient) { }
 
-  getAuctions(): Observable<IAuction[]> {
-    const auctions = of(AUCTIONS);
+  getAuctions(): Observable<any[]> {
     this.messageService.add(`AuctionService: fetched auctions`);
-    return auctions;
+    return this.http.get<any>(this.auctionAPIUrl + '/Auctions');
   }
 
-  getAuction(id: number): Observable<IAuction> {
-    const auction = AUCTIONS.find(h => h.id === id)!;
+  getAuction(id: number): Observable<any> {
     this.messageService.add(`AuctionService: fetched auction id=${id}`);
-    return of(auction);
+    return this.http.get<any>(this.auctionAPIUrl + `/Auctions/${id}`);
   }
+
+  addAuction(data:any) {
+    return this.http.post(this.auctionAPIUrl + '/Auctions', data);
+  }
+
+  updateAuction(id: number|string, data:any) {
+    return this.http.put(this.auctionAPIUrl + `/inspections/${id}`, data);
+  }
+  
 }
