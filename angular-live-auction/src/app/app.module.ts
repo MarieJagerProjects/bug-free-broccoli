@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './views/nav-bar/nav-bar.component';
@@ -13,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { SideBarComponent } from './views/side-bar/side-bar.component';
 import { FooterComponent } from './views/footer/footer.component';
+import { AuctionService } from './services/auction.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { FooterComponent } from './views/footer/footer.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuctionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { IAuction } from '../views/auction/IAuction';
 import { AUCTIONS } from '../mocks/mock-auctions';
 import { MessageService } from './message.service';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -10,7 +11,9 @@ import { MessageService } from './message.service';
 })
 export class AuctionService {
 
-  constructor(private messageService: MessageService) { }
+  readonly auctionAPIUrl = "https://localhost:7267/api";
+
+  constructor(private messageService: MessageService, private http:HttpClient) { }
 
   getAuctions(): Observable<IAuction[]> {
     const auctions = of(AUCTIONS);
