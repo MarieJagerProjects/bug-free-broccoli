@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "J:\\Prog\\Projekt\\Broccoli\\Brokkoli\\Brokkoli.csproj": {}
+    "J:\\Prog\\Projekt\\Broccoli\\dotnet-broccoli\\Brokkoli\\Brokkoli.csproj": {}
   },
   "projects": {
-    "J:\\Prog\\Projekt\\Broccoli\\Brokkoli\\Brokkoli.csproj": {
+    "J:\\Prog\\Projekt\\Broccoli\\dotnet-broccoli\\Brokkoli\\Brokkoli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "J:\\Prog\\Projekt\\Broccoli\\Brokkoli\\Brokkoli.csproj",
+        "projectUniqueName": "J:\\Prog\\Projekt\\Broccoli\\dotnet-broccoli\\Brokkoli\\Brokkoli.csproj",
         "projectName": "Brokkoli",
-        "projectPath": "J:\\Prog\\Projekt\\Broccoli\\Brokkoli\\Brokkoli.csproj",
+        "projectPath": "J:\\Prog\\Projekt\\Broccoli\\dotnet-broccoli\\Brokkoli\\Brokkoli.csproj",
         "packagesPath": "C:\\Users\\Mariechenkäfer\\.nuget\\packages\\",
-        "outputPath": "J:\\Prog\\Projekt\\Broccoli\\Brokkoli\\obj\\",
+        "outputPath": "J:\\Prog\\Projekt\\Broccoli\\dotnet-broccoli\\Brokkoli\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mariechenkäfer\\AppData\\Roaming\\NuGet\\NuGet.Config",

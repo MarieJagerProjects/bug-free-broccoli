@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Brokkoli.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220220142404_InitialCreate")]
+    [Migration("20220310143103_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,23 +32,53 @@ namespace Brokkoli.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                    b.Property<int>("QualityTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
 
                     b.Property<int>("VegetableTypeId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("QualityTypeId");
+
+                    b.HasIndex("StatusId");
+
                     b.HasIndex("VegetableTypeId");
 
                     b.ToTable("Auctions");
+                });
+
+            modelBuilder.Entity("Brokkoli.QualityType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Quality")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("QualityTypes");
                 });
 
             modelBuilder.Entity("Brokkoli.Status", b =>
@@ -59,7 +89,16 @@ namespace Brokkoli.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("StatusOption")
+                    b.Property<string>("Abbreviation")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("StatusDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StatusName")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
@@ -89,11 +128,27 @@ namespace Brokkoli.Migrations
 
             modelBuilder.Entity("Brokkoli.Auction", b =>
                 {
+                    b.HasOne("Brokkoli.QualityType", "QualityType")
+                        .WithMany()
+                        .HasForeignKey("QualityTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Brokkoli.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Brokkoli.VegetableType", "VegetableType")
                         .WithMany()
                         .HasForeignKey("VegetableTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("QualityType");
+
+                    b.Navigation("Status");
 
                     b.Navigation("VegetableType");
                 });

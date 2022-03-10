@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7urwn6m/w1x2oFRsQXJc606EdPHOHaftBaN8qmMH5h2MEIt/4ykTa6dKTr0oSr4FpmYXO80dHTvoqesPUJ/29Q==",
+  "dgSpecHash": "vEUDN0ACHrAV2jy13nqFxgjOU1ps1K5keYC1D5Dq0fPHnsns7p2CRsNqwExKYSVlgUjeu0eEGkstHl8SO/npCw==",
   "success": true,
-  "projectFilePath": "J:\\Prog\\Projekt\\Broccoli\\Brokkoli\\Brokkoli.csproj",
+  "projectFilePath": "J:\\Prog\\Projekt\\Broccoli\\dotnet-broccoli\\Brokkoli\\Brokkoli.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mariechenkäfer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mariechenkäfer\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

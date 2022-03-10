@@ -8,8 +8,10 @@ namespace Brokkoli
         [Required]
         public int Id { get; set; }
 
-        [StringLength(20)] [Required]
-        public string Status { get; set; } = string.Empty;
+        [Required]
+        public int StatusId { get; set; }
+
+        public Status? Status { get; set; }
 
         [StringLength(200)]
         public string? Description { get; set; }
@@ -19,6 +21,11 @@ namespace Brokkoli
 
         public VegetableType? VegetableType { get; set; }
 
+        [Required]
+        public int QualityTypeId { get; set; }
+        
+        public QualityType? QualityType { get; set; }
 
+        public int Quantity { get; set; }
     }
 }

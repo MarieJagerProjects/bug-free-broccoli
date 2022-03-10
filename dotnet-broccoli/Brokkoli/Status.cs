@@ -8,6 +8,11 @@ namespace Brokkoli
         public int Id { get; set; }
 
         [StringLength(20)]
-        public string StatusOption { get; set; } = string.Empty;
+        public string StatusName { get; set; } = string.Empty;
+
+        [StringLength(5)]
+        public string Abbreviation { get; set; } = string.Empty;
+
+        public string StatusDescription { get; set; } = string.Empty;
     }
 }

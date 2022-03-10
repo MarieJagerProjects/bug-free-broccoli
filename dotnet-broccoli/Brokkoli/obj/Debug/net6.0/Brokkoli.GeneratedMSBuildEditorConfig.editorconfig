@@ -8,9 +8,33 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Brokkoli
 build_property.RootNamespace = Brokkoli
-build_property.ProjectDir = J:\Prog\Projekt\Broccoli\Brokkoli\
+build_property.ProjectDir = J:\Prog\Projekt\Broccoli\dotnet-broccoli\Brokkoli\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = J:\Prog\Projekt\Broccoli\Brokkoli
+build_property.MSBuildProjectDirectory = J:\Prog\Projekt\Broccoli\dotnet-broccoli\Brokkoli
 build_property._RazorSourceGeneratorDebug = 
+
+[J:/Prog/Projekt/Broccoli/dotnet-broccoli/Brokkoli/Views/QualityTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbGl0eVR5cGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Prog/Projekt/Broccoli/dotnet-broccoli/Brokkoli/Views/QualityTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbGl0eVR5cGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Prog/Projekt/Broccoli/dotnet-broccoli/Brokkoli/Views/QualityTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbGl0eVR5cGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Prog/Projekt/Broccoli/dotnet-broccoli/Brokkoli/Views/QualityTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbGl0eVR5cGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Prog/Projekt/Broccoli/dotnet-broccoli/Brokkoli/Views/QualityTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbGl0eVR5cGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[J:/Prog/Projekt/Broccoli/dotnet-broccoli/Brokkoli/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

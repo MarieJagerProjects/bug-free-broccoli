@@ -27,6 +27,7 @@ export class AuctionService {
     return this.http.post(this.auctionAPIUrl + '/Auctions', data);
   }
 
+  //Auctions must not be deleted - change status to 
   updateAuction(id: number|string, data:any) {
     return this.http.put(this.auctionAPIUrl + `/inspections/${id}`, data);
   }
