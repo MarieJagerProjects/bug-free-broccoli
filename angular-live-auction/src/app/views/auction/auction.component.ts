@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
-import { IAuction } from './IAuction';
 import { AuctionService } from '../../services/auction.service';
 
 @Component({
@@ -11,16 +11,12 @@ import { AuctionService } from '../../services/auction.service';
 
 export class AuctionComponent implements OnInit {
   
-  auctions: IAuction[] = [];
+  auctions$: Observable<any[]> | undefined;
 
   constructor(private auctionService: AuctionService) { }
 
   ngOnInit(): void {
-    this.getAuctions();
-  }
-
-  getAuctions(): void {
-    this.auctionService.getAuctions().subscribe(auctions => this.auctions = auctions);
+    this.auctions$ = this.auctionService.getAuctions();
   }
 
 }    

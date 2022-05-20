@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuctionService {
 
-  readonly auctionAPIUrl = "https://localhost:7267/api";
+  readonly auctionAPIUrl = "https://localhost:7232";
 
   constructor(private messageService: MessageService, private http:HttpClient) { }
 
@@ -27,9 +27,9 @@ export class AuctionService {
     return this.http.post(this.auctionAPIUrl + '/Auctions', data);
   }
 
-  //Auctions must not be deleted - change status to 
+  //Auctions must not be deleted - change status to
   updateAuction(id: number|string, data:any) {
     return this.http.put(this.auctionAPIUrl + `/inspections/${id}`, data);
   }
-  
+
 }

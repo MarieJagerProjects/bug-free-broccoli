@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { IAuction } from '../auction/IAuction';
 import { AuctionService } from '../../services/auction.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-auction-detail',
@@ -12,7 +12,7 @@ import { AuctionService } from '../../services/auction.service';
 })
 export class AuctionDetailComponent implements OnInit {
 
-  auction?: IAuction;
+  auction$: Observable<any> | undefined;
 
   constructor(private route: ActivatedRoute, private auctionService: AuctionService, private location: Location) { }
 
@@ -22,7 +22,7 @@ export class AuctionDetailComponent implements OnInit {
 
   getAuction(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.auctionService.getAuction(id).subscribe(auction => this.auction = auction);
+    this.auction$ = this.auctionService.getAuction(id);
   }
 
   goBack(): void {
